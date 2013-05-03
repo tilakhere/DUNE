@@ -2,7 +2,13 @@
 //====
 /* written by Tilak Raj Singh
 
-        This is a simple implementation of inserters for a matrix class. Here a minute change has been applied from as described in the paper. Here on inserting all the values for a matrix in the destructor I have decreased the size of each column to the max limit it is filled so as to save memory. Like row 1 contains 5 elements and row 2 contains 3 elements and the slotsize for inserter is 7, then in the destructor I have decreased the size of row 1 to 5 and row 2 to 3. On declaring a inserter again for the same matrix it is checked it slotsize is greater than that of the row with max elements. If greater then each row is resized to the slot size given else each row is resized to the size of the row with max number of elements.
+        This is a simple implementation of inserters for a matrix class. Here a minute change has been applied from
+        as described in the paper. Here on inserting all the values for a matrix in the destructor I have decreased 
+        the size of each column to the max limit it is filled so as to save memory. Like row 1 contains 5 elements 
+        and row 2 contains 3 elements and the slotsize for inserter is 7, then in the destructor I have decreased 
+        the size of row 1 to 5 and row 2 to 3. On declaring a inserter again for the same matrix it is checked it 
+        slotsize is greater than that of the row with max elements. If greater then each row is resized to the slot 
+        size given else each row is resized to the size of the row with max number of elements.
 
 For inserters an optional update parameter is also provided to change value of a index already inserted.
         0(default) -> to replace existing value
